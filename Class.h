@@ -16,6 +16,6 @@ typedef struct Object {
 extern const Class ObjectClass;
 int instanceof(const void *, const void *), Object_cmp(const void *, const void *);
 unsigned Object_hash(const void *);
-void *Object_dup(const void *), Object_init(void *);
+void *Object_cpy(void *, const void *), *Object_dup(const void *), Object_init(void *), *Object_new(void), *Object_ref(void *), *Object_unref(void *);
 
 #endif /* Class_h */
